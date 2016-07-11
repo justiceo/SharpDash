@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharpDash
+namespace SharpDashTest
 {
-    public class Class1
+    public class Program
     {
+        public static void Main(string[] args)
+        {
+            
+        }
     }
 }
