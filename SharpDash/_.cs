@@ -13,16 +13,7 @@ namespace SharpDash
          */
         public static string Replace(string source, string oldString, string newString, StringComparison comp)
         {
-            int index = source.IndexOf(oldString, comp);
-            if (index < 0) return source;
-
-            // Remove the old text
-            source = source.Remove(index, oldString.Length);
-
-            // Add the replacemenet text
-            source = source.Insert(index, newString);
-
-            return source;
+            return source.Replace(oldString, newString, comp);
         }
     }
 }

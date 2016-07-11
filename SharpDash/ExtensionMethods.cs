@@ -8,18 +8,25 @@ namespace SharpDash
 {
     public static class ExtensionMethods
     {
+        /// <summary>
+        /// Extends the native Replace function with a Comparator
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="oldString"></param>
+        /// <param name="newString"></param>
+        /// <param name="comp"></param>
+        /// <returns></returns>
         public static string Replace(this string source, string oldString, string newString, StringComparison comp)
         {
             int index = source.IndexOf(oldString, comp);
             if (index < 0) return source;
-
-            // Remove the old text
+            
             source = source.Remove(index, oldString.Length);
-
-            // Add the replacemenet text
             source = source.Insert(index, newString);
 
             return source;
         }
+
+
     }
 }
